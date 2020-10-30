@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    margin: 4rem 2rem;
+}
+
+.container {
+    display: grid;
+    gap: 2rem;
+}
+
+.card {
+    padding: 1rem 1.5rem;
+    border: 1px solid gray;
+    border-radius: .4rem;
+}
+
+.card__header {
+    display: flex;
+    gap: 1rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
