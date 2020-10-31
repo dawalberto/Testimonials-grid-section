@@ -2,6 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap');
 
+:root {
+    --violet: hsl(263, 55%, 52%);
+    --light--violet: rgb(144, 110, 198);
+    --dark-gray-blue: hsl(217, 19%, 35%);
+    --dark-black-blue:hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
 *,
 *::after,
 *::before {
@@ -19,7 +29,7 @@ body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-weight: 300;
     margin: 4rem 2rem;
-    background-color: hsl(210, 46%, 95%);
+    background-color: var(--light-grayish-blue, lightblue);
 }
 
 .container {
@@ -29,15 +39,67 @@ body {
 }
 
 .card {
-    padding: 1rem 1.5rem;
-    border: 1px solid gray;
+    padding: 1.5rem 1.5rem;
     border-radius: .4rem;
+    box-shadow: 51px 60px 89px -9px var(--light-gray);
 }
 
 .card__header {
     display: flex;
     gap: 1rem;
     align-items: center;
+}
+
+.card:nth-child(1) {
+    background-color: var(--violet, purple);
+}
+
+.card:nth-child(2) {
+    background-color: var(--dark-gray-blue, darkgray);
+}
+
+.card:nth-child(3),
+.card:nth-child(4) {
+    background-color: var(--white, white);
+}
+
+.card:nth-child(5) {
+    background-color: var(--dark-black-blue, darkblue);
+}
+
+.card:nth-child(1),
+.card:nth-child(2),
+.card:nth-child(5) {
+    color: var(--white, white);
+}
+
+.card__header-text p:last-child,
+.card__header-text p:last-child,
+.card__header-text p:last-child {
+    opacity: .5;
+}
+
+.card:nth-child(1) .card__img,
+.card:nth-child(5) .card__img  {
+    border: .1rem solid var(--light--violet, purple);
+}
+
+.card:nth-child(2) .card__img {
+    border: .1rem solid var(--dark-gray-blue, darkgrey);
+}
+
+.card:nth-child(3) .card__img,
+.card:nth-child(4) .card__img  {
+    border: .1rem solid var(--white, white);
+}
+
+.card__body p:last-child {
+    opacity: .7;
+}
+
+.card__img {
+    max-width: 40px;
+    border-radius: 50%;
 }
 
 .card__header-text p:first-child {
@@ -60,7 +122,7 @@ body {
 .attribution {
     font-size: 11px;
     text-align: center;
-    position: absolute;
+    position: fixed;
     bottom: .5rem;
     left: 50%;
     transform: translate(-50%, 0);
