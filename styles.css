@@ -152,7 +152,8 @@ body {
         grid-template-columns: repeat(4, calc(25% - 1.5rem));
         margin-left: auto;
         margin-right: auto;
-        width: 60%;
+        margin-top: 10rem;
+        width: 70%;
     }
 
     .card:nth-child(1) {
