@@ -52,6 +52,9 @@ body {
 
 .card:nth-child(1) {
     background-color: var(--violet, purple);
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 80% 0%;
 }
 
 .card:nth-child(2) {
@@ -61,6 +64,17 @@ body {
 .card:nth-child(3),
 .card:nth-child(4) {
     background-color: var(--white, white);
+}
+
+.card:nth-child(3) .card__body p:first-child,
+.card:nth-child(4) .card__body p:first-child {
+    opacity: .7;
+}
+
+.card:nth-child(1) .card__body p:first-child,
+.card:nth-child(2) .card__body p:first-child,
+.card:nth-child(5) .card__body p:first-child {
+    opacity: .9;
 }
 
 .card:nth-child(5) {
@@ -95,6 +109,7 @@ body {
 
 .card__body p:last-child {
     opacity: .7;
+    line-height: .9rem;
 }
 
 .card__img {
@@ -116,7 +131,7 @@ body {
 }
 
 .card__body p {
-    margin-top: .7rem;
+    margin-top: .9rem;
 }
 
 .attribution {
