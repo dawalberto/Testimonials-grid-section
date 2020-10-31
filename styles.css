@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap');
 
 *,
 *::after,
@@ -15,7 +17,9 @@ html {
 body {
     box-sizing: border-box;
     font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 300;
     margin: 4rem 2rem;
+    background-color: hsl(210, 46%, 95%);
 }
 
 .container {
@@ -33,6 +37,24 @@ body {
 .card__header {
     display: flex;
     gap: 1rem;
+    align-items: center;
+}
+
+.card__header-text p:first-child {
+    font-weight: 500;
+}
+
+.card__body p:first-child {
+    font-weight: 600;
+}
+
+.card__header-text,
+.card__body p:last-child {
+    font-size: 13px;
+}
+
+.card__body p {
+    margin-top: .7rem;
 }
 
 .attribution {
